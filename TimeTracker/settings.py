@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog',
-    'social_django'
+    'social_django',
 ]
 
 #ignore trailing /
@@ -56,8 +56,8 @@ SOCIAL_AUTH_AUTH0_SCOPE=[
 ]
 
 AUTHENTICATION_BACKEND=[
-    'social_core.backend.auth0.Auth0OAuth2',
-    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.auth0.Auth0OAuth2',
+    'django.contrib.auth.backends.ModelBackend'
 ]
 
 MIDDLEWARE = [
@@ -136,7 +136,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
